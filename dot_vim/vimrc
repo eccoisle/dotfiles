@@ -1,0 +1,29 @@
+" comment syntax	:h vim9-differences
+" set syntax (+=)	:h add-option-flags	h:'cpoptions' (example) 
+" vimrc			:h initialization 
+
+" vim-plug	github.com/junegunn/vim-plug
+call plug#begin()
+
+Plug 'vimwiki/vimwiki'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+
+call plug#end()
+
+" vimwiki	github.com/vimwiki/vimwiki
+set nocompatible
+filetype plugin on
+syntax on
+	
+	" :h vimwiki-global-settings
+let g:vimwiki_text_ignore_newline = 0	" :h g:vimwiki_text_ignore_newline
+
+" catppuccin	github.com/catppuccin/vim
+set termguicolors
+colorscheme catppuccin_mocha
+
+" personal preference
+set splitright				" :h 'splitright'
+set shortmess+=I			" https://vimhelp.org/vim_faq.txt.html#faq-36.5
+set cmdheight=2				" https://vimhelp.org/vim_faq.txt.html#faq-36.6
+set viminfo+=n~/.vim/viminfo		" :h viminfo-n (moves ~/.viminfo to ~/.vim/viminfo)
